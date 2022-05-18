@@ -1,0 +1,18 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 250px);
+    grid-gap: 250px;
+    background-color: rgb(163, 198, 196);
+}
+
+.nav {
+    display: block;
+    font-size: 5px;
+}
+
+.header {
+    display: flexbox;
+    align-content: center;
+
+}
