@@ -1,3 +1,52 @@
+* {
+    padding: 1px;
+    padding-bottom: 6px;
+    /* background-color: rgb(104, 104, 104); */
+    box-sizing: border-box;
+}
+
+.header {
+    display: grid;
+    background-color: rgb(230, 143, 66);
+    */ rgb(41, 148, 107);
+    */ height: 10vh;
+    width: 250vh;
+    grid-area: "hd";
+    margin: 1px;
+    padding: 1px;
+    border: 3px solid yellow;
+}
+
+.container {
+
+    display: grid;
+    width: 250vh;
+    height: 100vh;
+    grid-gap: 15px;
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 60px 50%;
+    grid-template-areas:
+        "hd hd""
+"sd ""main main main"
+        "footer footer footer";
+}
+
+#content {
+    display: flex;
+    /* flex-flow: column wrap; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* align-items: baseline; */
+    justify-items: center;
+    font-size: 15px;
+    width: 250vh;
+    height: 87vh;
+    background-color: rgb(18, 35, 43);
+    float: left;
+    border: 3px solid rgb(126, 128, 0);
+    grid-gap: 2px;
+}
+
 nav {
     display: block;
     font-size: 15px;
@@ -6,8 +55,8 @@ nav {
     margin: 0;
     padding: 0;
     float: left;
-    border: 2px solid rgb(252, 165, 4);
-    background-color: rgb(31, 90, 118);
+    border: 1px solid rgb(182, 124, 17);
+    /* background-color: rgb(31, 90, 118); */
 }
 
 nav a {
@@ -21,64 +70,43 @@ nav a:hover {
     background-color: rgb(233, 152, 0);
 }
 
-.container {
-    display: grid;
-    height: 30vh;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(4, 100px);
-    grid-template-areas:
-        "hd"
-        "contentBox"
-        "footer";
-    margin: 10px;
-}
+/* .content {
+    /* grid-area: "main";
+    border: 1px solid black; 
+}*/
 
-.headerBox {
+.sidebar {
+    grid-area: "sd";
     display: flex;
-    background-color: rgb(230, 143, 66);
-    /* rgb(41, 148, 107); */
-    height: 10vh;
-    width: 190vh;
-    grid-area: "hd"
+    flex-direction: column;
+    height: 15rem;
+    width: 250px;
 }
 
-.contentBox {
-    grid-area: "main";
-}
-
-body {
-    padding: 10px;
-    padding-bottom: 60px;
-}
-
-.footerBox {
-    display: block;
-    width: 190vh;
-    height: 8vh;
-    position: absolute;
-    grid-area: "footer";
-    background-color: rgb(31, 90, 118);
-    bottom: 0;
-    align-content: center;
-}
-
-#nestedGrid {
+.card {
     display: flex;
-    /* flex-flow: column wrap; */
-    flex-direction: row;
-    /* align-items: baseline; */
-    justify-items: center;
-    font-size: 15px;
-    width: 190vh;
-    height: 75vh;
-    background-color: rgb(18, 35, 43);
-    float: left;
+    flex-direction: column;
+    border: 2px solid pink;
+    border-radius: 5%;
+    grid-gap: 10px;
+    width: 250px;
+}
+
+#one {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 2px solid pink;
+    border-radius: 8%;
 }
 
 #two {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    border: 2px solid pink;
+    border-radius: 8%;
+
 }
 
 #four {
@@ -97,7 +125,6 @@ p {
     width: 230px;
     height: 100px;
     color: whitesmoke;
-
 }
 
 h1 {
@@ -134,8 +161,12 @@ img {
     border-radius: 15%;
     width: 180px;
     height: 150px;
-    object-fit: cover;
     border: 2px solid orange;
+    position: center;
+}
+
+#jazz {
+    filter: blur(.5px);
 }
 
 button {
@@ -148,6 +179,34 @@ button {
 
 button:hover {
     background-color: orange;
+}
+
+
+.footer {
+    display: block;
+    width: 250vh;
+    height: 5vh;
+    position: absolute;
+    grid-area: "footer";
+    background-color: rgb(31, 90, 118);
+    bottom: 0;
+    align-content: center;
+    border: 3px solid black;
+    text-justify: center;
+    text-align: center;
+    font-style: oblique;
+    font-family: cursive;
+    color: rgb(127, 206, 206);
+}
+
+@media all,
+(min-width:600px) and (max-width:1100px)and (orientation:landscape) {
+    .container {
+        grid-template-areas:
+            "hd""hd""hd""sd""sd""sd"
+            "main""main""main"
+            "footer""footer""footer";
+    }
 }
 
 /* .container {
@@ -174,11 +233,3 @@ button:hover {
     width: 350px;
     height: 350px;
 } */
-
-
-/* 
-.sidebarBox {
-    height: 10vh;
-    width: 100vh;
-    grid-area: "sidebar";
-    background-color: #ee9b00;} */
