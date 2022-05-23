@@ -7,7 +7,7 @@
 
 .header {
     display: grid;
-    background-color: rgb(209, 118, 0);
+    background-color: rgb(8, 110, 105);
     rgb(41, 148, 107);
     height: 10vh;
     width: 250vh;
@@ -18,14 +18,12 @@
 }
 
 .container {
-
     display: grid;
     width: 250vh;
     height: 98vh;
     grid-gap: 15px;
     grid-template-columns: 100px 100px;
     grid-template-rows: 60px 50%;
-
     grid-template-areas:
         "hd hd""
 "sd ""main main main"
@@ -35,7 +33,7 @@
 #content {
     display: flex;
     /* flex-flow: column wrap; */
-    flex-direction: column;
+    flex-direction: rows;
     flex-wrap: wrap;
     align-items: baseline;
     justify-items: center;
@@ -45,7 +43,7 @@
     background-color: rgb(18, 35, 43);
     float: left;
     border: 3px solid rgb(127, 206, 206);
-    grid-gap: 2px;
+    grid-gap: 75px;
 }
 
 nav {
@@ -79,7 +77,7 @@ nav a:hover {
     grid-area: "sd";
     display: flex;
     flex-direction: column;
-    height: 15rem;
+    height: 3rem;
     width: 250px;
 }
 
@@ -94,33 +92,24 @@ nav a:hover {
 }
 
 #one {
-    display: flex;
-    flex-direction: column;
     border: 2px solid pink;
     border-radius: 5%;
 }
 
 #two {
-    display: flex;
-    flex-direction: column;
     border: 2px solid pink;
     border-radius: 5%;
     background-color: rgb(51, 45, 45);
 }
 
 #four {
-    display: flex;
-    flex-direction: column;
     /* justify-content: flex-end; */
     background-color: rgb(1, 102, 105);
     border-radius: 5%;
     background-color: rgb(51, 45, 45);
-
 }
 
 #six {
-    display: flex;
-    flex-direction: column;
     background-color: rgb(51, 45, 45);
 }
 
@@ -185,7 +174,6 @@ button:hover {
     background-color: orange;
 }
 
-
 .footer {
     display: block;
     width: 250vh;
@@ -206,10 +194,12 @@ button:hover {
 @media all,
 (min-width:600px) and (max-width:1100px)and (orientation:landscape) {
     .container {
-        grid-template-areas:
-            "hd""hd""hd""sd""sd""sd"
-            "main""main""main"
-            "footer""footer""footer";
+        display: flex;
+        flex-direction: column;
+    }
+
+    * {
+        flex-shrink: 5;
     }
 }
 

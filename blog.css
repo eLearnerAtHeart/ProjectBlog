@@ -1,0 +1,131 @@
+* {
+    padding: 3px;
+    margin: 1px;
+}
+
+.container {
+    border: 2px;
+    margin: 2px;
+    background: lightpink;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    border: 2px;
+    margin: 2px;
+    background: rgb(3, 100, 129);
+    grid-area: header;
+}
+
+nav {
+    display: block;
+    font-size: 15px;
+    list-style-type: none;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgb(182, 124, 17);
+    background-color: rgb(31, 90, 118);
+}
+
+nav a {
+    color: white;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+nav a:hover {
+    background-color: rgb(233, 152, 0);
+}
+
+.sideBar {
+    border: 6px;
+    margin: 2px;
+    background: rgb(99, 133, 143);
+    grid-area: sideBar;
+}
+
+.socialSharing {
+    border: 2px;
+    margin: 2px;
+    background: rgb(36, 113, 116);
+    display: flex;
+
+}
+
+.author {
+    border: 2px solid blue;
+    margin: 2px;
+    background: yellow;
+}
+
+.content {
+    border: 12px solid purple;
+    margin: 2px;
+    background: yellow;
+    display: flex;
+    flex-direction: column;
+}
+
+.cooking {
+    border: 2px solid blue;
+    margin: 2px;
+    background: yellow;
+    grid-area: cooking;
+}
+
+.dancing {
+    border: 2px solid blue;
+    margin: 2px;
+    background: yellow;
+    grid-area: dancing;
+}
+
+.biking {
+    border: 2px solid blue;
+    margin: 2px;
+    background: yellow;
+    grid-area: baking;
+}
+
+.h2O {
+    border: 2px solid blue;
+    margin: 2px;
+    background: yellow;
+    grid-area: H2O;
+}
+
+.selfCare {
+    border: 2px solid blue;
+    margin: 2px;
+    background: yellow;
+    grid-area: selfCare;
+}
+
+.games {
+    border: 2px solid blue;
+    margin: 2px;
+    background: yellow;
+    grid-area: games;
+}
+
+.footer {
+    border: 2px solid blue;
+    margin: 2px;
+    background: yellow;
+    grid-area: footer;
+}
+
+@media all,
+(min-width:600px) and (max-width:1100px)and (orientation:landscape) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    * {
+        flex-shrink: 1;
+    }
+}
